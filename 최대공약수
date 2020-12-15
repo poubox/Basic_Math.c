@@ -1,0 +1,15 @@
+#include <stdio.h>
+// 최대공약수
+int main()
+{
+	int a, b;
+	int i; // 반복 변수
+	int gcd = 0; // 최대공약수
+	printf("두 수를 입력: ");
+	scanf_s("%d %d", &a, &b);
+	for (i = 1; i < a ; i++) {
+		if (a % i == 0 && b % i == 0)
+			gcd = i;
+	}
+	printf("최대공약수: %d\n", gcd);
+}
