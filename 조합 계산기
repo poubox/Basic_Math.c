@@ -1,0 +1,32 @@
+#include <stdio.h>
+// 조합 계산기
+
+int get_integer()
+{
+	int n;
+	printf("정수를 입력: ");
+	scanf_s("%d", &n);
+	return n;
+}
+int combination(int n, int r)
+{
+	return (factorial(n) / (factorial(r) * factorial(n - r)));
+}
+int factorial(int n)
+{
+	if (n == 0)
+		return 1;
+	else
+		return n * factorial(n - 1);
+}
+int main()
+{
+	int a, b; // 조합함수 인수
+
+	a = get_integer();
+	b = get_integer();
+
+	printf("%d\n",factorial(a));
+	printf("%d\n", factorial(b));
+	printf("C(%d,%d) = %d\n", a, b, combination(a, b));
+}
