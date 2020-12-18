@@ -1,0 +1,18 @@
+#include <stdio.h>
+// 잔돈 계산기
+
+int main()
+{
+	int coin_500 = 500, coin_100 = 100;
+	int change;
+
+	printf("잔돈 현황: ");
+	scanf_s("%d", &change);
+
+	coin_500 = change / 500;
+	change = change % 500;
+	coin_100 = change / 100;
+
+	printf("500원 동전의 개수: %d\n",coin_500);
+	printf("100원 동전의 개수: %d\n",coin_100);
+}
